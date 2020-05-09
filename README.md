@@ -98,6 +98,22 @@ Q[state][action] = update_Q(Q[state][action], np.dot(Q[next_state], policy_s), \
 state = next_state
 ```
 
+- Common function
+
+```
+def update_Q(Qsa, Qsa_next, reward, alpha, gamma):
+    """ updates the action-value function estimate using the most recent time step """
+    return Qsa + (alpha * (reward + (gamma * Qsa_next) - Qsa))
+
+def epsilon_greedy_probs(env, Q_s, i_episode, eps=None):
+    """ obtains the action probabilities corresponding to epsilon-greedy policy """
+    epsilon = 1.0 / i_episode
+    if eps is not None:
+        epsilon = eps
+    policy_s = np.ones(env.nA) * epsilon / env.nA
+    policy_s[np.argmax(Q_s)] = 1 - epsilon + (epsilon / env.nA)
+    return policy_s
+```
 ## Taxi-v2-Task
 OpenAI Gym environment: https://github.com/openai/gym/blob/master/gym/envs/toy_text/taxi.py
 
