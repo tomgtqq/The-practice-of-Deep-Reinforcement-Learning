@@ -99,7 +99,7 @@ def epsilon_greedy_probs(env, Q_s, i_episode, eps=None):
 		 	scores.append(np.mean(tmp_scores))
 
     # plot performance
-    plt.plot(np.linspace(0,num_e 'pisodes,len(scores),endpoint=False),np.asarray(scores))
+    plt.plot(np.linspace(0,num_episodes,len(scores),endpoint=False),np.asarray(scores))
     plt.xlabel('Episode Number')
     plt.ylabel('Average Reward (Over Next %d Episodes)' % plot_every)
     plt.show()
