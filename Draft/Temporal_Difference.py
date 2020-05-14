@@ -1,14 +1,14 @@
 # Temporal-Difference Methods
 
-#Part 0 : Explore CliffWalkingEnv
+# Part 0 : Explore CliffWalkingEnv
 # importing the necessary packages
 
 import sys
 import gym
-import numpy as np 
+import numpy as np
 from collections import defaultdict, deque
-import matplotlib.pyplot as plt 
-%matplotlib inline 
+import matplotlib.pyplot as plt
+%matplotlib inline
 
 import check_test
 from plot_utils import plot_values
@@ -23,16 +23,16 @@ print(env.observation_space)
 # Input: policy π, positive integer num episodes, small positive fraction α, GLIE {εi}
 # Output: value function Q (≈ qπ if num episodes is large enough)
 # Initialize Q arbitrarily (e.g., Q(s, a) = 0 for all s ∈ S and a ∈ A(s), and Q(terminal-state, ·) = 0)
-# for i ← 1 to num episodes do 
+# for i ← 1 to num episodes do
 # 	ε ← εi
 # 	Observe S0
 #     Choose action A0 using policy derived from Q (e.g., ε-greedy) t←0
 #     repeat
 #        Take action At and observe Rt+1 , St+1
 #        Choose action At+1 using policy derived from Q (e.g., ε-greedy)
-#        Q(St, At) ← Q(St, At) + α(Rt+1 + γQ(St+1, At+1) − Q(St, At)) 
+#        Q(St, At) ← Q(St, At) + α(Rt+1 + γQ(St+1, At+1) − Q(St, At))
 #        t←t+1
-#     until St is terminal; 
+#     until St is terminal;
 # end
 # return Q
 
@@ -44,12 +44,14 @@ def update_Q(Qsa, Qsa_next, reward, alpha, gamma):
 
 # Choose action A0 using policy derived from Q (e.g., ε-greedy)
 # Choose action At+1 using policy derived from Q (e.g., ε-greedy)
+
+
 def epsilon_greedy_probs(env, Q_s, i_episode, eps=None):
 	epsilon = 1.0 / i_episode
 	if eps is not None:
-		epsilon = eps 
+		epsilon = eps
 
-	policy_s = np.ones(env.nA) * epsilon / env.nA 
+	policy_s = np.ones(env.nA) * epsilon / env.nA
 	policy_s[np.argmax(Q_s)] = 1 - epsilon + (epsilon / env.nA)
     return  policy_s
 
@@ -198,7 +200,7 @@ def  q_learning(env, num_episodes, alpha, gamma=1.0):
 	# plot the estimated optimal state-value function
 	plot_values([np.max(Q_sarsamax[key]) if key in Q_sarsamax else 0 for key in np.arange(48)])
 
-	#Part 3: TD Control: Expected Sarsa
+	# Part 3: TD Control: Expected Sarsa
 
 	# Input: policy π, positive integer num episodes, small positive fraction α, GLIE {εi}
 	# Output: value function Q (≈ qπ if num episodes is large enough)
