@@ -43,7 +43,7 @@ Thus,  S+={0,1,…,47} , and  A={0,1,2,3} . Verify this by running the code cell
 
 ![CliffWalking](src/CliffWalking-State-Value.png)
 
-#### Sarsa
+## Sarsa
 
 ![Sarsa](src/Sarsa.png)
 ```
@@ -60,7 +60,7 @@ state = next_state
 action = next_action
 ```
 
-#### Q-learning
+## Q-learning
 
 ![Q-Learning](src/Q-Learning.png)
 ```
@@ -79,7 +79,7 @@ Q[state][action] = update_Q(Q[state][action], np.max(Q[next_state]), reward, alp
 state = next_state
 ```
 
-#### Expected Sarsa
+### Expected Sarsa
 
 ![Expected Sarsa](src/Expected Sarsa.png)
 ```
@@ -115,10 +115,12 @@ def epsilon_greedy_probs(env, Q_s, i_episode, eps=None):
     policy_s[np.argmax(Q_s)] = 1 - epsilon + (epsilon / env.nA)
     return policy_s
 ```
+
 ## Taxi-v2-Task
 OpenAI Gym environment: https://github.com/openai/gym/blob/master/gym/envs/toy_text/taxi.py
 
 ![Taxi-v2-Task](src/Taxi-v2-Task-1.png)
+
 
 ## RL_1_LunarLander-v2
 A solution to solve LunarLander-v2 of OpenAI 
@@ -128,7 +130,8 @@ A solution to solve LunarLander-v2 of OpenAI
 ![untrained agent](RL_1_LunarLander-v2/src/agent_untrained.gif) 
 ![trained agent](RL_1_LunarLander-v2/src/agent_trained.gif) 
 
-### The Taxi Problem
+
+## The Taxi Problem
 from "Hierarchical Reinforcement Learning with the MAXQ Value Function Decomposition" by Tom Dietterich
  - Description:
     There are four designated locations in the grid world indicated by R(ed), G(reen), Y(ellow), and B(lue). When the episode starts, the taxi starts off at a random square and the passenger is at a random location. The taxi drives to the passenger's location, picks up the passenger, drives to the passenger's destination (another one of the four specified locations), and then drops off the passenger. Once the passenger is dropped off, the episode ends.
