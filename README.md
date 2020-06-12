@@ -163,11 +163,11 @@ $ python main.py
 alpha = 0.27 , gamma = 0.76 , Best average reward 9.416
 
 
-## CartPole-v1
+## CartPole-v1 (Policy-Based Methods)
 OpenAI Gym environment: https://gym.openai.com/envs/CartPole-v1/
 
 ![CartPole-v1](src/CartPole-v1.gif)
-
+```
 Description:
         A pole is attached by an un-actuated joint to a cart, which moves along
         a frictionless track. The pendulum starts upright, and the goal is to
@@ -204,7 +204,7 @@ Description:
         Solved Requirements:
         Considered solved when the average reward is greater than or equal to
         195.0 over 100 consecutive trials.
-
+```
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
