@@ -120,6 +120,14 @@ OpenAI Gym environment: https://github.com/openai/gym/blob/master/gym/envs/toy_t
 
 ![Taxi-v2-Task](src/Taxi-v2-Task-1.png)
 
+## RL_1_LunarLander-v2
+A solution to solve LunarLander-v2 of OpenAI 
+
+[Lunarlander-v2](https://gym.openai.com/envs/LunarLander-v2/) (Action Space 4, State Space 8)
+
+![untrained agent](RL_1_LunarLander-v2/src/agent_untrained.gif) 
+![trained agent](RL_1_LunarLander-v2/src/agent_trained.gif) 
+
 ### The Taxi Problem
 from "Hierarchical Reinforcement Learning with the MAXQ Value Function Decomposition" by Tom Dietterich
  - Description:
@@ -205,15 +213,6 @@ Description:
         Considered solved when the average reward is greater than or equal to
         195.0 over 100 consecutive trials.
 ```
-
-## RL_1_LunarLander-v2
-A solution to solve LunarLander-v2 of OpenAI 
-
-[Lunarlander-v2](https://gym.openai.com/envs/LunarLander-v2/) (Action Space 4, State Space 8)
-
-![untrained agent](src/agent_untrained.gif) 
-![trained agent](src/agent_trained.gif) 
-
 
 ## Versioning
 
