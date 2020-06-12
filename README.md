@@ -205,6 +205,16 @@ Description:
         Considered solved when the average reward is greater than or equal to
         195.0 over 100 consecutive trials.
 ```
+
+## RL_1_LunarLander-v2
+A solution to solve LunarLander-v2 of OpenAI 
+
+[Lunarlander-v2](https://gym.openai.com/envs/LunarLander-v2/) (Action Space 4, State Space 8)
+
+![untrained agent](src/agent_untrained.gif) 
+![trained agent](src/agent_trained.gif) 
+
+
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
