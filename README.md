@@ -217,6 +217,14 @@ Description:
         195.0 over 100 consecutive trials.
 ```
 
+## PongDeterministic-v4 (Proximal Policy Optimization)
+![PongDeterministic-v4](src/PongDeterministic-v4.gif)
+- Noise Reduction
+![noise_reduction](src/noise_reduction.png)
+![rewards_normalization](src/rewards_normalization.png)
+- Credit Assignment
+![Credit Assignment](src/credit_assignment.png)
+
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
